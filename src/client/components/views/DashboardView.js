@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Grid, Menu, Label, Header, Container, Button } from 'semantic-ui-react'
+import { Grid, Menu, Label, Header, Container } from 'semantic-ui-react'
 
 import { Spinner } from 'react-redux-spinner' //-- spinner
 

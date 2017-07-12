@@ -1,9 +1,7 @@
-import PropTypes from 'prop-types';
 import React, { Component } from 'react';
-import { Container, Grid, Menu, Label, Icon, Header, Divider, Item, Table } from 'semantic-ui-react';
+import { Container, Grid, Menu, Label, Header, Divider, Item, Table } from 'semantic-ui-react';
 
 import ReportsListView from './ReportsListView';
-import SingleReportView from './SingleReportView';
 import CaseSearch from '../../containers/CaseSearch';
 
 class ReportsView extends Component {

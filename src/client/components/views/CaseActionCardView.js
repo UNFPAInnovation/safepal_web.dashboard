@@ -5,8 +5,6 @@ import { addNote,setAddNoteStatus  } from '../../actions'
 import { forwardTo } from '../../utils'
 import { Spinner } from 'react-redux-spinner' //-- spinner
 
-const cardColors = { label: 'teal', button: 'pink', card: 'teal', icon: 'teal', yellow: 'yellow', content: 'grey', pink: "pink"}
-
 class CaseActionCardView extends Component {
 	constructor(props){
 		super(props)

@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import { Item, Table, Container, Label } from 'semantic-ui-react'
 import { forwardTo } from '../../utils'
 import Pagination from 'rc-pagination'
-import Select from 'rc-select'
 import '../../utils/pagination.css'
 import locale from '../../utils/locale'
 
@@ -32,7 +31,6 @@ class TableListView extends Component {
   render(){
     let reports = ''
     const {pageSize, rangeStart, rangeEnd, currentPage } = this.state
-    let cases = this.props.reports
     let pagination = ''
 
     if(this.props.reports !== null && this.props.reports.length > 0){

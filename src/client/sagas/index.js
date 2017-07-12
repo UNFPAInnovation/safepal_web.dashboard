@@ -1,18 +1,15 @@
 import { take, call, put, fork, race } from 'redux-saga/effects'
-import {hashSync, genSaltSync, compareSync} from 'bcryptjs'
+import {hashSync, genSaltSync} from 'bcryptjs'
 import localStorage from 'localStorage' //-todo: consider switching to LocalForage - has callbacks/promises
 
 
 import {
   REQUEST_LOGIN,
   SET_AUTH_STATUS,
-  GET_USER,
   SET_USER,
   SENDING_REQUEST,
   LOADING,
-  LOGIN_SUCCEEDED,
   CLEAR_ERROR,
-  GET_TOKEN,
   LOGOUT,
   REQUEST_REPORTS,
   RECEIVE_REPORTS,

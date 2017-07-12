@@ -3,10 +3,6 @@ import { Table, Header, List, Container, Item } from 'semantic-ui-react'
 import { dashboardColors } from '../../utils'
 
 class NotesListView extends Component {
-	constructor(props){
-		super(props)
-	}
-
 	render(){
 		let noteRows = (
 						<Header as='h3' color={dashboardColors.content} textAlign='center'>No notes have been added yet. Use the form below to add note/comment on case</Header>

@@ -1,14 +1,10 @@
 import React, { Component } from 'react'
-import { Card, Label, Divider, Button, List, Table, Icon, Container, Header } from 'semantic-ui-react'
+import { Label, List, Table, Container, Header } from 'semantic-ui-react'
 import { displayStringData } from '../../utils'
 
 const cardColors = { label: 'teal', button: 'pink', card: 'teal', icon: 'teal', yellow: 'yellow', content: 'grey', pink: "pink"}
 
 class CaseView extends Component {
-	constructor(props){
-		super(props)
-	}
-
 	 render(){
 	 	let report = this.props.report.map((report, idx) =>
 	 	(<Table celled striped fluid definition selectable color={cardColors.pink} padded size='large'>

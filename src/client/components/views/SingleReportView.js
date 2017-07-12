@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Container, Grid, Menu, Label, Icon, Header, Divider, Segment } from 'semantic-ui-react';
+import { Container, Grid, Menu, Label, Header } from 'semantic-ui-react';
 import { connect } from 'react-redux';
 
 import CaseView from './CaseView';
@@ -24,7 +24,7 @@ class SingleReportView extends Component{
 
 
 	render(){
-		let { report, notes } = this.props;
+		let { report } = this.props;
 		let { menuSection, currentCase } = this.state;
 		let caseNotes = [];
 		if(this.props.notes.length > 0){

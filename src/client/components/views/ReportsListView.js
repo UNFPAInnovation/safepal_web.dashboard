@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
-import { Label, Icon, Menu, Button } from 'semantic-ui-react';
 
-import CardListView from './CardListView';
 import TableListView from './TableListView';
 
 class ReportsListView extends Component {

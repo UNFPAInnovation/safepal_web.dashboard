@@ -1,6 +1,6 @@
-import PropTypes from 'prop-types'
+//import PropTypes from 'prop-types'
 import React, { Component } from 'react'
-import { Container, Grid, Menu, Label, Icon, Header, Divider, Item, Table } from 'semantic-ui-react'
+import { Container, Grid, Menu, Label, Header, Divider, Item, Table } from 'semantic-ui-react'
 
 import TableListView from './TableListView'
 import CaseSearch from '../../containers/CaseSearch'

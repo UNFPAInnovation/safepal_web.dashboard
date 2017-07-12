@@ -46,27 +46,27 @@ function getRequest(endpoint, token = false){
 
 //- handle post requests
 function postRequest(endpoint, payload){
-
-	let actionDate = new Date()
 	let data = {
 		"token": payload.token
 	}
 	switch(endpoint){
 		case '/auth/login':
-		data.username = payload.username,
-		data.hash = payload.hash
+		data.username = payload.username;
+		data.hash = payload.hash;
+			break;
 		case '/activity/addactivity':
-		data.note = payload.note,
-		data.user = payload.user,
-		data.caseNumber = payload.caseNumber,
-		data.action = payload.action,
-		data.action_date = payload.action_date
+		data.note = payload.note;
+		data.user = payload.user;
+		data.caseNumber = payload.caseNumber;
+		data.action = payload.action;
+		data.action_date = payload.action_date;
+			break;
 		case '/reports/all':
-		data.cso_id = payload.cso_id
+		data.cso_id = payload.cso_id;
+		break;
 		default:
-		data = payload
+		data = payload;
 	}
-
 	
 	return axios({
 		method: 'post',
