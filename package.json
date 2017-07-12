@@ -1,0 +1,54 @@
+{
+  "name": "SafePal-Dashboard",
+  "version": "1.8.0",
+  "description": "SafePal Dashboard, respond quickly to GBV cases",
+  "private": true,
+  "author": {
+    "name": "slybard",
+    "email": "joshoke2003@gmail.com"
+  },
+  "homepage": "http://safepal.co",
+  "dependencies": {
+    "autoprefixer": "^6.6.1",
+    "axios": "^0.16.1",
+    "babel-polyfill": "^6.23.0",
+    "bcryptjs": "^2.4.3",
+    "btoa": "1.1.2",
+    "dotenv": "^4.0.0",
+    "iojs": "^1.0.0",
+    "localStorage": "1.0.3",
+    "rc-pagination": "^1.9.5",
+    "rc-select": "^6.8.6",
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4",
+    "react-redux": "^5.0.3",
+    "react-redux-spinner": "^0.7.2",
+    "react-router": "2.5.1",
+    "react-router-dom": "^4.1.1",
+    "redux": "3.6.0",
+    "redux-saga": "^0.14.5",
+    "semantic-ui-css": "^2.2.10",
+    "semantic-ui-react": "^0.67.2"
+  },
+  "devDependencies": {
+    "axios": "^0.16.1",
+    "babel-polyfill": "^6.23.0",
+    "bcryptjs": "^2.4.3",
+    "btoa": "1.1.2",
+    "localStorage": "1.0.3",
+    "react-redux": "^5.0.3",
+    "react-redux-spinner": "^0.7.2",
+    "react-router": "2.5.1",
+    "react-scripts": "1.0.7",
+    "redux": "3.6.0",
+    "redux-logger": "^3.0.1",
+    "redux-saga": "^0.14.5",
+    "semantic-ui-react": "^0.67.2"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}
