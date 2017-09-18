@@ -1,8 +1,8 @@
 import axios from 'axios'
 import localStorage from 'localStorage'
 
-let baseURL = ''
-let userid = ''
+let baseURL = 'https://api.safepal.co/api/v1'
+let userid = 'C7rPaEAN9NpPGR8e9wz9bzw'
 
 let api = {
 	getToken(){

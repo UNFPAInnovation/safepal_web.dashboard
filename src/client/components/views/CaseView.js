@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Label, List, Table, Container, Header } from 'semantic-ui-react'
-import { displayStringData } from '../../utils'
+import { displayStringData, castSelfReportsToSurvivor } from '../../utils'
 
 const cardColors = { label: 'teal', button: 'pink', card: 'teal', icon: 'teal', yellow: 'yellow', content: 'grey', pink: "pink"}
 
@@ -30,13 +30,7 @@ class CaseView extends Component {
 	          					<List.Item>
 	          						<List.Content>
 	          							<Header as='h3'>reported by</Header>
-	          							<List.Description>{displayStringData(report.reporter)}</List.Description>
-	          						</List.Content>
-	          					</List.Item>
-	          					<List.Item>
-	          						<List.Content>
-	          							<Header as='h3'>relationship to reporter</Header>
-	          							<List.Description>{displayStringData(report.reporter_relationship)}</List.Description>
+	          							<List.Description>{castSelfReportsToSurvivor(report.reporter)}</List.Description>
 	          						</List.Content>
 	          					</List.Item>
 	          				</List>
@@ -59,6 +53,12 @@ class CaseView extends Component {
 	          						<List.Content>
 	          							<Header as='h3'>incident date</Header>
 	          							<List.Description>{displayStringData(report.incident_date)}</List.Description>
+	          						</List.Content>
+	          					</List.Item>
+	          					<List.Item>
+	          						<List.Content>
+	          							<Header as='h3'>where incident happened</Header>
+	          							<List.Description>{displayStringData(report.location)}</List.Description>
 	          						</List.Content>
 	          					</List.Item>
 	          					<List.Item>
@@ -112,7 +112,7 @@ class CaseView extends Component {
 
         		<Table.Row>
           			<Table.Cell collapsing>
-            			<Label size='huge'>location data</Label>
+            			<Label size='huge'>reporter location</Label>
           			</Table.Cell>
           			<Table.Cell>
           					<List size='large' relaxed horizontal>

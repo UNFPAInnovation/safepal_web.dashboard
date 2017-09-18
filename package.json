@@ -7,7 +7,7 @@
     "name": "slybard",
     "email": "joshoke2003@gmail.com"
   },
-  "homepage": "http://safepal.co",
+  "homepage": "https://safepal.co",
   "dependencies": {
     "autoprefixer": "^6.6.1",
     "axios": "^0.16.1",

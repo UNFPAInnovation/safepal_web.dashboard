@@ -30,6 +30,8 @@ let utils = {
 
 export const displayStringData = (data) => (data === '' || data === undefined || data === null || data === 'null') ? 'Unknown' : data
 
+export const castSelfReportsToSurvivor = (data) => (data === 'self' || data === 'self_report') ? 'survivor' : data
+
 export const forwardTo = (location) => browserHistory.push(location)
 
 export const generateLocalToken = () => Math.random().toString(36).substring(2)
