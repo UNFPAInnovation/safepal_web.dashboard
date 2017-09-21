@@ -1,10 +1,14 @@
 import React, { Component } from 'react'
-import { Label, List, Table, Container, Header } from 'semantic-ui-react'
+import { Card, Label, Divider, Button, List, Table, Icon, Container, Header } from 'semantic-ui-react'
 import { displayStringData, castSelfReportsToSurvivor } from '../../utils'
 
 const cardColors = { label: 'teal', button: 'pink', card: 'teal', icon: 'teal', yellow: 'yellow', content: 'grey', pink: "pink"}
 
 class CaseView extends Component {
+	constructor(props){
+		super(props)
+	}
+
 	 render(){
 	 	let report = this.props.report.map((report, idx) =>
 	 	(<Table celled striped fluid definition selectable color={cardColors.pink} padded size='large'>
@@ -51,7 +55,7 @@ class CaseView extends Component {
 	          					</List.Item>
 	          					<List.Item>
 	          						<List.Content>
-	          							<Header as='h3'>incident date</Header>
+	          							<Header as='h3'>when the incident happened</Header>
 	          							<List.Description>{displayStringData(report.incident_date)}</List.Description>
 	          						</List.Content>
 	          					</List.Item>
@@ -59,12 +63,6 @@ class CaseView extends Component {
 	          						<List.Content>
 	          							<Header as='h3'>where incident happened</Header>
 	          							<List.Description>{displayStringData(report.location)}</List.Description>
-	          						</List.Content>
-	          					</List.Item>
-	          					<List.Item>
-	          						<List.Content>
-	          							<Header as='h3'>perpetuator</Header>
-	          							<List.Description>{displayStringData(report.perpetuator)}</List.Description>
 	          						</List.Content>
 	          					</List.Item>
 	          				</List>

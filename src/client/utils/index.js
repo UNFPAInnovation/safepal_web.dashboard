@@ -28,7 +28,7 @@ let utils = {
 	},
 }
 
-export const displayStringData = (data) => (data === '' || data === undefined || data === null || data === 'null') ? 'Unknown' : data
+export const displayStringData = (data) => (data === '' || data === undefined || data === null || data === 'null' || data === 'Unknown') ? '--' : data
 
 export const castSelfReportsToSurvivor = (data) => (data === 'self' || data === 'self_report') ? 'survivor' : data
 
