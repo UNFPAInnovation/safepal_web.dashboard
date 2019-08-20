@@ -1,8 +1,10 @@
 import axios from 'axios'
-import localStorage from 'localStorage'
+import localStorage from 'localStorage';
+require('dotenv').config();
 
-let baseURL = ''
-let userid = ''
+
+let baseURL = process.env.BASEURL
+let userid = process.evv.USERID
 
 let api = {
 	getToken(){

@@ -22,7 +22,19 @@ handleClick(e, {name}){
 	this.setState({ status: name })
 	this.showReportsByCategory(name)
 }
-
+  //to update the synmaic color codes
+  renderColorSwitch(status) {
+    switch(status) {
+      case 'New':
+        return 'orange';
+      case 'In Progress':
+        return 'blue';
+      case 'Closed':
+        return 'green';
+      default:
+        return 'gray';
+    }
+  }
 showReportsByCategory(category = 'All'){
 	
 	switch(category){
@@ -97,19 +109,19 @@ render(){
   		<CaseSearch dataSource={categoryData} resultRenderer={searchResultsRenderer}/>
   			<Menu pointing horizontal widths={4}>
   				<Menu.Item name='All' active={status === 'All'} onClick={this.handleClick}>
-  					<Label color='teal'>{userAllCount}</Label>
+  					<Label color='gray'>{userAllCount}</Label>
   					<Header as='h4' color='grey'>All</Header>
   				</Menu.Item>
   				<Menu.Item name='New' active={status === 'New'} onClick={this.handleClick}>
-  					<Label color='teal'>{userNewCount}</Label>
+  					<Label color='orange'>{userNewCount}</Label>
   					<Header as='h4' color='grey'>New</Header>
   				</Menu.Item>
   				<Menu.Item name='In Progress' active={status === 'In Progress'} onClick={this.handleClick}>
-  					<Label color='teal'>{userPendingCount}</Label>
+  					<Label color='blue'>{userPendingCount}</Label>
   					<Header as='h4' color='grey'>In Progress</Header>
   				</Menu.Item>
   				<Menu.Item name='Closed' active={status === 'Closed'} onClick={this.handleClick}>
-  					<Label color='teal'>{userClosedCount}</Label>
+  					<Label color='green'>{userClosedCount}</Label>
   					<Header as='h4' color='grey'>Closed</Header>
   				</Menu.Item>
 			</Menu>

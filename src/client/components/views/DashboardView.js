@@ -40,7 +40,7 @@ render(){
   		<Spinner config={{ trickleSpeed: 200, easing: 'easeInCubic', speed: 1000 }} />
   			<Grid celled doubling>
 		      <Grid.Row fluid>
-		        <Grid.Column width={3}>
+		        <Grid.Column mobile={16} largeScreen={3} widescreen={3} tablet={16}>
 		          <Menu fluid vertical pointing>
 		            <Menu.Item name='reports' active={activeItem === 'reports'} onClick={this.handleClick}>
 		              <Label color='teal'>{this.props.numReports}</Label>
@@ -52,7 +52,7 @@ render(){
 		            </Menu.Item>
 		          </Menu>
 		        </Grid.Column>
-		        <Grid.Column width={13}>
+		        <Grid.Column mobile={16} largeScreen={13} widescreen={13} tablet={16}>
 		          {data}
 		        </Grid.Column>
 		      </Grid.Row>

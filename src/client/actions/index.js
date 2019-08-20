@@ -44,6 +44,7 @@ export function clearError (hideError) {
  */
 export function requestLogin (creds) {
 	return {type: REQUEST_LOGIN, creds}
+
 }
 
 /**

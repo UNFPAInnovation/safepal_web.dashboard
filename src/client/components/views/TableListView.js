@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Item, Table, Container, Label } from 'semantic-ui-react'
+import { Item, Table, Grid, Container, Label } from 'semantic-ui-react'
 import { forwardTo } from '../../utils'
 import Pagination from 'rc-pagination'
 import '../../utils/pagination.css'
@@ -26,6 +26,19 @@ class TableListView extends Component {
       rangeEnd: page * 25,
       currentPage: page
     })
+  }
+  //to update the synmaic color codes
+  renderColorSwitch(status) {
+    switch(status) {
+      case 'New':
+        return 'orange';
+      case 'In Progress':
+        return 'blue';
+      case 'Closed':
+        return 'green';
+      default:
+        return 'gray';
+    }
   }
 
   render(){
@@ -56,7 +69,7 @@ class TableListView extends Component {
                 <Table.Cell collapsing>
                   <Item>
                     <Item.Content verticalAlign='middle'>
-                      <Label size='medium' color={cardColors.pink}>{report.status}</Label>
+                      <Label size='medium' color={this.renderColorSwitch(report.status)}  >{report.status}</Label>
                     </Item.Content>
                   </Item>
                 </Table.Cell>
@@ -88,16 +101,16 @@ class TableListView extends Component {
             </Table.Row>
       ))
 
-      reports = (<Table celled striped fluid sortable color={cardColors.pink} padded size='large'>
+      reports = (<Table celled stackable ={true} striped fluid sortable color={cardColors.pink} padded size='small'>
             <Table.Header>
               <Table.Row>
-                <Table.HeaderCell>case Number</Table.HeaderCell>
-                <Table.HeaderCell>status</Table.HeaderCell>
-                <Table.HeaderCell>date reported</Table.HeaderCell>
-                <Table.HeaderCell>type</Table.HeaderCell>
-                <Table.HeaderCell>age</Table.HeaderCell>
-                <Table.HeaderCell>gender</Table.HeaderCell>
-                <Table.HeaderCell>location</Table.HeaderCell>
+                <Table.HeaderCell>Case Number</Table.HeaderCell>
+                <Table.HeaderCell>Status</Table.HeaderCell>
+                <Table.HeaderCell>Date reported</Table.HeaderCell>
+                <Table.HeaderCell>Type</Table.HeaderCell>
+                <Table.HeaderCell>Age</Table.HeaderCell>
+                <Table.HeaderCell>Gender</Table.HeaderCell>
+                <Table.HeaderCell>Location</Table.HeaderCell>
               </Table.Row>
             </Table.Header>
             <Table.Body>
@@ -106,10 +119,13 @@ class TableListView extends Component {
           </Table>)
     }
   	return(
-  			<Container>
+      
+      <Grid doubling>
+		      <Grid.Row fluid>
           {reports}
          {pagination}
-        </Container>
+        </Grid.Row>
+        </Grid>
   		)
   }
 }

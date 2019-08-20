@@ -90,32 +90,30 @@ render(){
 	</Table>)
 
   return(
-  	<Grid padded floated='right' stackable doubling width={12}>
-  		<Container>
+  	<Grid padded floated='right' stackable doubling mobile={16} largeScreen={16} widescreen={16} tablet={16}>
+
   		<CaseSearch dataSource={categoryData} resultRenderer={searchResultsRenderer}/>
   			<Menu pointing horizontal widths={4}>
   				<Menu.Item name='All' active={status === 'All'} onClick={this.handleClick}>
-  					<Label color='teal'>{allCount}</Label>
+  					<Label>{allCount}</Label>
   					<Header as='h4' color='grey'>All</Header>
   				</Menu.Item>
   				<Menu.Item name='New' active={status === 'New'} onClick={this.handleClick}>
-  					<Label color='teal'>{newCount}</Label>
+  					<Label color='orange'>{newCount}</Label>
   					<Header as='h4' color='grey'>New</Header>
   				</Menu.Item>
   				<Menu.Item name='In Progress' active={status === 'In Progress'} onClick={this.handleClick}>
-  					<Label color='teal'>{pendingCount}</Label>
+  					<Label color='blue'>{pendingCount}</Label>
   					<Header as='h4' color='grey'>In Progress</Header>
   				</Menu.Item>
   				<Menu.Item name='Closed' active={status === 'Closed'} onClick={this.handleClick}>
-  					<Label color='teal'>{closedCount}</Label>
+  					<Label color='green'>{closedCount}</Label>
   					<Header as='h4' color='grey'>Closed</Header>
   				</Menu.Item>
 			</Menu>
-		</Container>
 	  	<Divider hidden/>
-		<Container>
+
 			<ReportsListView data={categoryData} listVersion={status}/>
-		</Container>
 	</Grid>
 
   	)

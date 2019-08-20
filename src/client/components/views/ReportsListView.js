@@ -14,9 +14,9 @@ class ReportsListView extends Component {
   render(){
     const data  = this.props.data;
   	return(
-  			<div>
+
           <TableListView reports={data} />
-        </div>
+
   		)
   }
 }
