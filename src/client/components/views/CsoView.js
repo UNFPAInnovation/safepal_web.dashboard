@@ -8,15 +8,16 @@ import moment from 'moment';
 import api from '../../../server/lib/api';
 
 
-import CsoListView from './CsoListView';
 
+import CsoListView from './CsoListView';
+const googleMapsKey = require('../../assets/keys.json');
 const L = require('leaflet');
 const Pointer = require('../../assets/pointer.png');
 
 const provider = new GoogleProvider({
   region: 'ug',
   params: {
-    key: 'AIzaSyCGy8oKABLzT1zJluhQnvSTZAm2uuXb08k',
+    key: googleMapsKey.maps,
   },
 });
 var PointerIcon = L.icon({
