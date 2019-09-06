@@ -17,5 +17,6 @@ const mapDispatchToProps = (dispatch) => {
 	return dispatch(requestReports({cso_id: localStorage.SPTCso}))
 } 
 
+
 const Dashboard = connect(mapStateToProps,mapDispatchToProps)(DashboardView)
 export default Dashboard

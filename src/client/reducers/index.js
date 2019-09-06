@@ -12,7 +12,7 @@ import { SET_AUTH_STATUS,
 	CLEAR_NOTES, 
 	CLEAR_REPORTS, 
 	CLEAR_USER, 
-	SET_ADD_NOTE_STATUS } from '../utils/constants'
+	SET_ADD_NOTE_STATUS, REQUEST_CSOS } from '../utils/constants'
 
 import { combineReducers } from 'redux'
 //-- spinner
@@ -34,6 +34,7 @@ let init = {
 	notes: [],
 
 	/*misc*/
+	csos:[],
 	errorHidden: true,
 	pendingTasks: 0,
 	currentlySending: false,
@@ -84,13 +85,17 @@ function rootReducer (state = init, action) {
 			return {...state, userid: action.userid}
 		case LOADING:
 			return {...state, isLoading: action.isLoading}
+		
+		/*csos*/
+		case REQUEST_CSOS:
+			return {...state, csos: action.csos }
 
 		/*default*/
 		default:
 		return state
 	}
 }
-
+false
 
 const reducer = combineReducers({initialState: rootReducer, pendingTasks: pendingTasksReducer})
 

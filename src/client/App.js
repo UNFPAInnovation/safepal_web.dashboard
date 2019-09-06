@@ -21,7 +21,7 @@ import Login from './containers/Login'
 
 //-- store setup
 let sagasMiddleware = createSagaMiddleware()
-const store = createStore(reducer, applyMiddleware(sagasMiddleware))
+const store = createStore(reducer, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(), applyMiddleware(sagasMiddleware))
 
 //--init sagas
 sagasMiddleware.run(saga) //auto-run middleware
@@ -34,7 +34,7 @@ function checkAuthOnRoute(nextState, replace){
 
 	store.dispatch(clearError(true)) //error
 
-	  // Check if the path isn't dashboard. That way we can apply specific logic to
+	  // Check if the path isn't dashboard. That way we can apply specific logic to, 
   // display/render the path we want to
 
 	if (nextState.location.pathname !== '/dashboard') {

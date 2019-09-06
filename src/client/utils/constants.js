@@ -37,3 +37,6 @@ export const REFRESH_NOTES = 'REFRESH_NOTES'
 export const NOTES_ERROR = 'NOTES_ERROR'
 export const CLEAR_NOTES = 'CLEAR_NOTES'
 export const SET_ADD_NOTE_STATUS = 'SET_ADD_NOTE_STATUS'
+
+//-- CSOs
+export const REQUEST_CSOS = 'REQUEST_CSOS'

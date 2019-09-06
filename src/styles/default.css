@@ -1,0 +1,11 @@
+.leaflet-top{
+    bottom: 15px;
+    top:unset !important;
+}
+input.glass{
+    border: 1px solid #fff !important;
+}
+.leaflet-control-geosearch.bar form{
+    width: 90%;
+    margin:0 auto;
+}

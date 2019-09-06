@@ -2,9 +2,10 @@ import React, { Component } from 'react'
 import { Grid, Menu, Label, Header, Container } from 'semantic-ui-react'
 
 import { Spinner } from 'react-redux-spinner' //-- spinner
-
+import Csos from '../../containers/Csos'
 import Reports from '../../containers/Reports' 
 import MyReports from '../../containers/MyReports'
+import CsoView from './CsoView'
 //import Summary from '../../containers/Summary' 
 
 class DashboardView extends Component {
@@ -23,9 +24,10 @@ handleClick(e, {name}){
 render(){
 	const { activeItem } = this.state
 	let data 
-    if (activeItem === 'summary') {
+    if (activeItem === 'manage_csos') {
       //data = <Summary/>
       //data = (<div>summary</div>)
+			data = <Csos><CsoView/></Csos>
     }
     else if(activeItem === 'reports'){
     	data = <Reports/>
@@ -49,6 +51,10 @@ render(){
 		            <Menu.Item name='user_reports' active={activeItem === 'user_reports'} onClick={this.handleClick}>
 		              <Label color='teal'>{this.props.numUserReports}</Label>
 		              <Header as='h4' color='grey'>My Reports</Header>
+		            </Menu.Item>
+								<Menu.Item name='manage_csos' active={activeItem === 'manage_csos'} onClick={this.handleClick}>
+								<Label style={{opacity:0}}></Label>
+		              <Header as='h4' color='grey'>Manage CSOs</Header>
 		            </Menu.Item>
 		          </Menu>
 		        </Grid.Column>

@@ -111,7 +111,7 @@ export function* reportsSaga(){
           window.alert('Oops, something went wrong.')
         }
       }
-    }
+      generateLocalToken    }
     yield put({type: LOADING,[ pendingTask ]: end, isLoading: false}) //end reports task
 
     yield put({type: SENDING_REQUEST, sending: false})
@@ -218,6 +218,15 @@ export function* addNote(token, note){
   return response.data.status
 }
 
+
+/*
+* CSOS EFFECT
+*/
+export function* getAllCSOs(token){
+  let response = yield call(api.getAllCSOs, token)
+  return response.csos
+}
+
 /**
  * Effect to handle auth
  * @param  {string} username               The username of the user
@@ -232,10 +241,10 @@ export function* authentication ({username, password, isRegistering}) {
   let loginStatus = null
   token = yield call(getToken)
 
-  //generate hash
-  let pSalt = genSalt(password)
-  let pHash = hashSync(generateLocalToken(), pSalt)
-  password = pHash  //switch out for hash
+  //generate hash has been moved to the back end
+  // let pSalt = genSalt(password)
+  // let pHash = hashSync(generateLocalToken(), pSalt)
+  password = password  //switch out for hash
 
  if (token !== undefined) {
     //try to log in the user with credentials

@@ -16,6 +16,7 @@ import {
 	REFRESH_REPORTS,
 	REQUEST_NOTES, 
 	RECEIVE_NOTES,
+	REQUEST_CSOS,
 	ADD_NOTE, SET_ADD_NOTE_STATUS} from '../utils/constants'
 
 //-- MISC
@@ -60,7 +61,7 @@ export function setAuthState (authState) {
 }*/
 
 /**
- * Tells the app we want to log out a user
+ * Tells the app we want to log out a userREQUEST_LOGIN
  */
 export function logout () {
   return {type: LOGOUT}
@@ -119,4 +120,9 @@ export function setAddNoteStatus(notesModalOpen, noteAddedStatus = false){
 //-- MISC
 export function isLoading(isLoading){
 	return { type: LOADING, isLoading }
+}
+
+//-- CSOS/CASES
+export function requestCSOs(cso_id){
+	return { type: REQUEST_CSOS }
 }

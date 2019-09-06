@@ -1,10 +1,10 @@
 import axios from 'axios'
 import localStorage from 'localStorage';
-require('dotenv').config();
+//require('dotenv').config({path: '../../../.env'});
 
 
-let baseURL = process.env.BASEURL
-let userid = process.evv.USERID
+let baseURL = "http://localhost:8888/api/v1"
+let userid = "C7rPaEAN9NpPGR8e9wz9bzw";
 
 let api = {
 	getToken(){
@@ -29,6 +29,11 @@ let api = {
 		let notes = JSON.parse(note)
 		let payload = {token: token, note: notes.note, user: notes.user, caseNumber: notes.caseNumber, action: notes.action, action_date: notes.action_date}
 		return postRequest('/activity/addactivity', payload)
+	},
+	getCSOs(token){
+		userid = localStorage.SPTUserId
+		let payload = {token: token}
+		return postRequest('/cso/all', payload)
 	}
 }
 
