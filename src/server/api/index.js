@@ -3,7 +3,7 @@ import localStorage from 'localStorage';
 //require('dotenv').config({path: '../../../.env'});
 
 
-let baseURL = "http://localhost:8888/api/v1"
+let baseURL = "http://localhost/safe_pal_api/api/v1"
 let userid = "C7rPaEAN9NpPGR8e9wz9bzw";
 
 let api = {

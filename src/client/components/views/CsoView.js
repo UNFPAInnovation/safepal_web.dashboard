@@ -119,9 +119,7 @@ class CsoView extends Component {
 		closeOnDimmerClick:true,
 		startTime:"",
 		endTime:"",
-		csoData: [
-       
-    ]
+		csoData: []
 	};
 }
 
@@ -244,6 +242,8 @@ class AddCsoForm extends React.Component{
 			cso_latitude:null,
 			cso_working_hours:null,
 			cso_phone_number:null,
+			username:null,
+			password:null,
 			active:false
 		};
 		this._handleChange = this._handleChange.bind(this);
@@ -313,6 +313,14 @@ handleHide (){
 				<Form.Field>
 				<label>Phone number</label>
 				<input type="text" placeholder='+25670...' onChange={this._handleChange} value={this.state.cso_phone_number} name="cso_phone_number" />
+				</Form.Field>
+				<Form.Field>
+				<label>Username</label>
+				<input type="text" placeholder='username' onChange={this._handleChange} value={this.state.username} name="username" />
+				</Form.Field>
+				<Form.Field>
+				<label>Password</label>
+				<input type="password" placeholder='secure password' onChange={this._handleChange} value={this.state.password} name="password" />
 				</Form.Field>
 				<Form.Field>
 				<label>Location</label>

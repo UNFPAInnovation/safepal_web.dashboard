@@ -11,31 +11,31 @@ class CaseView extends Component {
       		<Table.Body>
         		<Table.Row>
           			<Table.Cell collapsing>
-            			<Label size='huge'>case</Label>
+            			<Label size='huge'>Case</Label>
           			</Table.Cell>
           			<Table.Cell>
 	          				<List size='large' relaxed horizontal>
 	          					<List.Item>
 	          						<List.Content>
-	          							<Header as='h3'>status</Header>
+	          							<Header as='h3'>Status</Header>
 	          							<Label size='medium' color={cardColors.pink}>{displayStringData(report.status)}</Label>
 	          						</List.Content>
 	          					</List.Item>
 	          					<List.Item>
 	          						<List.Content>
-	          							<Header as='h3'>date reported</Header>
+	          							<Header as='h3'>Date reported</Header>
 	          							<List.Description>{displayStringData(report.reportDate)}</List.Description>
 	          						</List.Content>
 	          					</List.Item>
 	          					<List.Item>
 	          						<List.Content>
-	          							<Header as='h3'>reported by</Header>
+	          							<Header as='h3'>Reported by</Header>
 	          							<List.Description>{displayStringData(report.reporter)}</List.Description>
 	          						</List.Content>
 	          					</List.Item>
 	          					<List.Item>
 	          						<List.Content>
-	          							<Header as='h3'>relationship to reporter</Header>
+	          							<Header as='h3'>Relationship to reporter</Header>
 	          							<List.Description>{displayStringData(report.reporter_relationship)}</List.Description>
 	          						</List.Content>
 	          					</List.Item>
@@ -45,25 +45,25 @@ class CaseView extends Component {
 
         		<Table.Row>
           			<Table.Cell collapsing>
-            			<Label size='huge'>basic info</Label>
+            			<Label size='huge'>Basic info</Label>
           			</Table.Cell>
           			<Table.Cell>
 	          				<List size='large' relaxed horizontal>
 	          					<List.Item>
 	          						<List.Content>
-	          							<Header as='h3'>type</Header>
+	          							<Header as='h3'>Type</Header>
 	          							<List.Description>{displayStringData(report.type)}</List.Description>
 	          						</List.Content>
 	          					</List.Item>
 	          					<List.Item>
 	          						<List.Content>
-	          							<Header as='h3'>incident date</Header>
+	          							<Header as='h3'>Incident date</Header>
 	          							<List.Description>{displayStringData(report.incident_date)}</List.Description>
 	          						</List.Content>
 	          					</List.Item>
 	          					<List.Item>
 	          						<List.Content>
-	          							<Header as='h3'>perpetuator</Header>
+	          							<Header as='h3'>Perpetuator</Header>
 	          							<List.Description>{displayStringData(report.perpetuator)}</List.Description>
 	          						</List.Content>
 	          					</List.Item>
@@ -74,20 +74,26 @@ class CaseView extends Component {
 
         		<Table.Row>
           			<Table.Cell collapsing>
-            			<Label size='huge'>bio data</Label>
+            			<Label size='huge'>Bio data</Label>
           			</Table.Cell>
           			<Table.Cell>
           					<List size='large' relaxed horizontal>
 	          					<List.Item>
 	          						<List.Content>
-	          							<Header as='h3'>age</Header>
+	          							<Header as='h3'>Age</Header>
 	          							<List.Description>{displayStringData(report.age)}</List.Description>
 	          						</List.Content>
 	          					</List.Item>
 	          					<List.Item>
 	          						<List.Content>
-	          							<Header as='h3'>gender</Header>
+	          							<Header as='h3'>Gender</Header>
 	          							<List.Description>{displayStringData(report.gender)}</List.Description>
+	          						</List.Content>
+	          					</List.Item>
+								  <List.Item>
+	          						<List.Content>
+	          							<Header as='h3'>Disability</Header>
+	          							<List.Description>{displayStringData(report.disability)}</List.Description>
 	          						</List.Content>
 	          					</List.Item>
 	          				</List>
@@ -96,13 +102,13 @@ class CaseView extends Component {
 
         		<Table.Row>
           			<Table.Cell collapsing>
-            			<Label size='huge'>details/narrative</Label>
+            			<Label size='huge'>Details/Narrative</Label>
           			</Table.Cell>
           			<Table.Cell>
           					<List size='large' relaxed horizontal>
 	          					<List.Item>
 	          						<List.Content>
-	          							<Header as='h3'>details</Header>
+	          							<Header as='h3'>Details</Header>
 	          							<List.Description>{displayStringData(report.details)}</List.Description>
 	          						</List.Content>
 	          					</List.Item>
@@ -112,37 +118,37 @@ class CaseView extends Component {
 
         		<Table.Row>
           			<Table.Cell collapsing>
-            			<Label size='huge'>location data</Label>
+            			<Label size='huge'>Location data</Label>
           			</Table.Cell>
           			<Table.Cell>
           					<List size='large' relaxed horizontal>
 	          					<List.Item>
 	          						<List.Content>
-	          							<Header as='h3'>district</Header>
+	          							<Header as='h3'>District</Header>
 	          							<List.Description>{displayStringData(report.district) }</List.Description>
 	          						</List.Content>
 	          					</List.Item>
 	          					<List.Item>
 	          						<List.Content>
-	          							<Header as='h3'>county</Header>
+	          							<Header as='h3'>County</Header>
 	          							<List.Description>{displayStringData(report.county)}</List.Description>
 	          						</List.Content>
 	          					</List.Item>
 	          					<List.Item>
 	          						<List.Content>
-	          							<Header as='h3'>subcounty</Header>
+	          							<Header as='h3'>Subcounty</Header>
 	          							<List.Description>{displayStringData(report.subcounty)}</List.Description>
 	          						</List.Content>
 	          					</List.Item>
 	          					<List.Item>
 	          						<List.Content>
-	          							<Header as='h3'>parish</Header>
+	          							<Header as='h3'>Parish</Header>
 	          							<List.Description>{displayStringData(report.parish)}</List.Description>
 	          						</List.Content>
 	          					</List.Item>
 	          					<List.Item>
 	          						<List.Content>
-	          							<Header as='h3'>village</Header>
+	          							<Header as='h3'>Village</Header>
 	          							<List.Description>{displayStringData(report.village)}</List.Description>
 	          						</List.Content>
 	          					</List.Item>
@@ -152,13 +158,13 @@ class CaseView extends Component {
 
         		<Table.Row>
           			<Table.Cell collapsing>
-            			<Label size='huge'>contact info</Label>
+            			<Label size='huge'>Contact info</Label>
           			</Table.Cell>
           			<Table.Cell>
           					<List size='large' relaxed horizontal>
 	          					<List.Item>
 	          						<List.Content>
-	          							<Header as='h3'>contact</Header>
+	          							<Header as='h3'>Contact</Header>
 	          							<List.Description>{displayStringData(report.contact)}</List.Description>
 	          						</List.Content>
 	          					</List.Item>
