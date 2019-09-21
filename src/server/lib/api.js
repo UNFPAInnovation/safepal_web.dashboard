@@ -1,4 +1,4 @@
-let baseURL = "http://localhost/safe_pal_api/api/v1";
+let baseURL = "https://api.safepal.co/api/v1";
 let userid = "C7rPaEAN9NpPGR8e9wz9bzw";
 exports.get = function(requesturl = "", callback) {
   this.getToken(function(error, token) {
