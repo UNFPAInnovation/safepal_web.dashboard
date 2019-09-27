@@ -61,7 +61,7 @@ class InnerControlMap extends Component {
 		map = new L.Map('innerMap');
 		//  L.tileLayer( style + '/{z}/{x}/{y}' + scalex + '.png'
 			 var osmUrl = 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
-			 var osmAttrib = 'Weyonjje';
+			 var osmAttrib = 'Safepal';
 			 var osm = new L.TileLayer(osmUrl, {
 					minZoom: 7,
 				 //maxZoom: 7,
