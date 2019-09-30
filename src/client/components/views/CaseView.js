@@ -128,30 +128,37 @@ class CaseView extends Component {
 	          							<List.Description>{displayStringData(report.district) }</List.Description>
 	          						</List.Content>
 	          					</List.Item>
-	          					<List.Item>
+								  
+	          					{/* <List.Item>
 	          						<List.Content>
 	          							<Header as='h3'>County</Header>
 	          							<List.Description>{displayStringData(report.county)}</List.Description>
 	          						</List.Content>
-	          					</List.Item>
+	          					</List.Item> */}
 	          					<List.Item>
 	          						<List.Content>
 	          							<Header as='h3'>Subcounty</Header>
 	          							<List.Description>{displayStringData(report.subcounty)}</List.Description>
 	          						</List.Content>
 	          					</List.Item>
-	          					<List.Item>
+								  <List.Item>
+	          						<List.Content>
+	          							<Header as='h3'>Incident location</Header>
+	          							<List.Description>{displayStringData(report.location)}</List.Description>
+	          						</List.Content>
+	          					</List.Item>
+	          					{/* <List.Item>
 	          						<List.Content>
 	          							<Header as='h3'>Parish</Header>
 	          							<List.Description>{displayStringData(report.parish)}</List.Description>
 	          						</List.Content>
-	          					</List.Item>
-	          					<List.Item>
+	          					</List.Item> */}
+	          					{/* <List.Item>
 	          						<List.Content>
 	          							<Header as='h3'>Village</Header>
 	          							<List.Description>{displayStringData(report.village)}</List.Description>
 	          						</List.Content>
-	          					</List.Item>
+	          					</List.Item> */}
 	          				</List>
           			</Table.Cell>
         		</Table.Row>
