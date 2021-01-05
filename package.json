@@ -10,7 +10,7 @@
   "homepage": "http://safepal.co",
   "dependencies": {
     "autoprefixer": "^6.6.1",
-    "axios": "^0.16.1",
+    "axios": "^0.21.1",
     "babel-polyfill": "^6.23.0",
     "bcryptjs": "^2.4.3",
     "btoa": "1.1.2",
@@ -31,7 +31,7 @@
     "semantic-ui-react": "^0.67.2"
   },
   "devDependencies": {
-    "axios": "^0.16.1",
+    "axios": "^0.21.1",
     "babel-polyfill": "^6.23.0",
     "bcryptjs": "^2.4.3",
     "btoa": "1.1.2",
